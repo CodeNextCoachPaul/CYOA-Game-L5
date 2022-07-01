@@ -1,7 +1,8 @@
 import consoles;
 import random;
 money = 0
-
+checkOutPrice = 0
+print(consoles.ps5items.returns(each[0]))
 def startGame(text):
     print(f"Hi, {hello}, welcome to GameStop.\nWe have a PS4, PS5, Xbox One X and Xbox One section.")
     money()
@@ -23,22 +24,63 @@ def navigation():
     while True:
         if choice == "ps5":
             consoles.ps5items.printOptions()
-            newChoice = input("Enter (y or n)")
-            pass
+            newChoice = input("Enter (y or n)").lower()
+            if newChoice == "y":
+                print("Great, these items are added to your cart.")
+                checkOutPrice = checkOutPrice+140
+                checkout(checkOutPrice)
+                break
+            else:
+                print("Ok, choose the aisle again.")
         elif choice == "ps4":
             consoles.ps4items.printOptions()
-            newChoice = ("Enter (y or n)")
-            pass
+            newChoice = input("Enter (y or n)").lower()
+            if newChoice == "y":
+                print("Great, these items are added to your cart.")
+                checkOutPrice = checkOutPrice+140
+                checkout(checkOutPrice)
+                break
+            else:
+                print("Ok, choose the aisle again.")
         elif choice == "xb1":
             consoles.xb1items.printOptions()
-            newChoice = input("Enter (y or n)")
-            pass
+            newChoice = input("Enter (y or n)").lower()
+            if newChoice == "y":
+                print("Great, these items are added to your cart.")
+                checkOutPrice = checkOutPrice+140
+                checkout(checkOutPrice)
+                break
+            else:
+                print("Ok, choose the aisle again.")
         elif choice == "xb1x":
             consoles.xb1xitems.printOptions()
-            newChoice = input("Enter (y or n)")
-            pass
+            newChoice = input("Enter (y or n)").lower()
+            if newChoice == "y":
+                print("Great, these items are added to your cart.")
+                checkOutPrice = checkOutPrice+140
+                checkout(checkOutPrice)
+                break
+            else:
+                print("Ok, choose the aisle again.")
         else:
             print("Enter a valid option")
 
+def checkout(a):
+    if checkOutPrice>money:
+        foundOrNot = random.randint(0,2)
+        print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
+        print(f"You have rolled a {foundOrNot}")
+        if foundOrNot == 0:
+            print("Good, you found enough money outside, so you pay and exit.")
+            exit()
+        else:
+            print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
+def exit():
+    leftRight = input("Do you walk to the left or right side of the street?\tType r for right and l for left")
+    while True:
+        if leftRight == "r" :
+            print("Your games fall into the sewer, oops, game over")
+        elif leftRight == "l":
+            print("You make it home safe, you win, good job")
 hello = input("Welcome, what is your name?")
 startGame(hello)
