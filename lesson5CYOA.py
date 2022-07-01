@@ -1,10 +1,6 @@
 import consoles;
 import random;
 money = 0
-consoles.ps5game("Resident Evil: Village", 70, "Batman Arkham Collection", 70)
-consoles.ps4game("Street Fighter 5", 40, "Black Ops 3", 25)
-consoles.xb1game("Infinite Warfare", 15, "2K21", 20)
-consoles.xb1xgame("Gotham Knights", 70, "MK11", 36)
 
 def startGame(text):
     print(f"Hi, {hello}, welcome to GameStop.\nWe have a PS4, PS5, Xbox One X and Xbox One section.")
@@ -26,16 +22,20 @@ def navigation():
     choice = str(input("What is your choice?")).lower()
     while True:
         if choice == "ps5":
-            newChoice = ("Would you like to purchase RE8 and Batman Arkham Collection?\Enter (y or n)")
+            consoles.ps5items.printOptions()
+            newChoice = input("Enter (y or n)")
             pass
         elif choice == "ps4":
-            newChoice = ("Would you like to purchase Street Fighter 5 and Black Ops 3?\Enter (y or n)")
+            consoles.ps4items.printOptions()
+            newChoice = ("Enter (y or n)")
             pass
         elif choice == "xb1":
-            newChoice = ("Would you like to purchase Infinite Warfare and 2K21?\Enter (y or n)")
+            consoles.xb1items.printOptions()
+            newChoice = input("Enter (y or n)")
             pass
         elif choice == "xb1x":
-            newChoice = ("Would you like to purchase Gotham Knights and MK11?\Enter (y or n)")
+            consoles.xb1xitems.printOptions()
+            newChoice = input("Enter (y or n)")
             pass
         else:
             print("Enter a valid option")
