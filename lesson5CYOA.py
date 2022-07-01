@@ -1,9 +1,10 @@
-import ps4;
-import xb1;
-import xb1x;
-import ps5;
-import ranodm;
+import consoles;
+import random;
 money = 0
+consoles.ps5game("Resident Evil: Village", 70, "Batman Arkham Collection", 70)
+consoles.ps4game("Street Fighter 5", 40, "Black Ops 3", 25)
+consoles.xb1game("Infinite Warfare", 15, "2K21", 20)
+consoles.xb1xgame("Gotham Knights", 70, "MK11", 36)
 
 def startGame(text):
     print(f"Hi, {hello}, welcome to GameStop.\nWe have a PS4, PS5, Xbox One X and Xbox One section.")
@@ -41,5 +42,3 @@ def navigation():
 
 hello = input("Welcome, what is your name?")
 startGame(hello)
-
-#start 11:40
