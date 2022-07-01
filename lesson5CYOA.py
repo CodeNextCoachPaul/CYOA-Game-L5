@@ -2,7 +2,7 @@ import consoles;
 import random;
 money = 0
 checkOutPrice = 0
-print(consoles.ps5items.returns(each[0]))
+
 def startGame(text):
     print(f"Hi, {hello}, welcome to GameStop.\nWe have a PS4, PS5, Xbox One X and Xbox One section.")
     money()
