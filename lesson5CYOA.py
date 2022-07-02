@@ -1,8 +1,11 @@
 import consoles;
 import random;
 money = 0
+newPrice = 0
 
-def startGame(text):
+hello = input("Welcome, what is your name? ")
+
+def startGame(a):
     print(f"Hi, {hello}, welcome to GameStop.\nWe have a PS4, PS5, Xbox One X and Xbox One section.")
     money()
 
@@ -18,7 +21,6 @@ def money():
     navigation()
 
 def navigation():
-    checkOutPrice = 0
     print("Which aisle would you like to visit first?\nOptions: ps4, ps5, xb1, xb1x")
     print("Your PS5 video game options are Resident Evil: Village - $70 and Batman Arkham Collection - $70\nYour PS4 video game options are Street Fighter 5 - $40 and Call of Duty Black Ops 3 - $25\nYour Xbox One options are Call of Duty Infinite Warfare - $15 and NBA 2K21 - $20\n And lastly Xbox One X which has Gotham Knights - $70 and Mortal Kombat 11 - $36")
     choice = str(input("What is your choice?")).lower()
@@ -28,8 +30,8 @@ def navigation():
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
-                checkOutPrice = checkOutPrice+140
-                checkout(checkOutPrice)
+                newPrice = 140
+                checkout(newPrice)
                 break
             else:
                 print("Ok, choose the aisle again.")
@@ -38,8 +40,8 @@ def navigation():
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
-                checkOutPrice = checkOutPrice+140
-                checkout(checkOutPrice)
+                newPrice = 37
+                checkout(newPrice)
                 break
             else:
                 print("Ok, choose the aisle again.")
@@ -48,18 +50,18 @@ def navigation():
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
-                checkOutPrice = checkOutPrice+140
-                checkout(checkOutPrice)
+                newPrice = 46
+                checkout(newPrice)
                 break
             else:
                 print("Ok, choose the aisle again.")
         elif choice == "xb1x":
             consoles.xb1xitems.printOptions()
             newChoice = input("Enter (y or n)").lower()
-            if newChoice == "y":
+            if newChoice == "y":                
                 print("Great, these items are added to your cart.")
-                checkOutPrice = checkOutPrice+140
-                checkout(checkOutPrice)
+                newPrice = 151
+                checkout(newPrice)
                 break
             else:
                 print("Ok, choose the aisle again.")
@@ -67,7 +69,7 @@ def navigation():
             print("Enter a valid option")
 
 def checkout(a):
-    if checkOutPrice>money:
+    if newPrice>money:
         foundOrNot = random.randint(0,2)
         print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
         print(f"You have rolled a {foundOrNot}")
@@ -83,6 +85,5 @@ def exit():
             print("Your games fall into the sewer, oops, game over")
         elif leftRight == "l":
             print("You make it home safe, you win, good job")
-            
-hello = input("Welcome, what is your name? ")
+
 startGame(hello)
