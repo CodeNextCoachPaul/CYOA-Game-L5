@@ -1,22 +1,18 @@
 import consoles;
 import random;
-money = 0
-newPrice = 0
+cardAmt = int(random.randint(0, 36))
+cashAmt = int(random.randint(0, 145))
+balance = cardAmt+cashAmt
 
-hello = input("Welcome, what is your name? ")
-
-def startGame(a):
+def startGame():
+    hello = input("Welcome, what is your name? ")
     print(f"Hi, {hello}, welcome to GameStop.\nWe have a PS4, PS5, Xbox One X and Xbox One section.")
     money()
 
 def money():
     print("Your game experience will vary based on the amount of money you recieve. Make your next moves wisely.")
     print("You will recieve 2 different random balances that will contribute to your outcome in this game.\nEven if your credit card amount and cash amount are high, that still won't mean you'll win.")
-    cardAmt = random.randint(0, 36)
-    cashAmt = random.randint(0, 140)
-    totalAmt = cardAmt+cashAmt
-    money = totalAmt
-    print(f"The amount of money on your card is {cardAmt} and your cash amount is {cashAmt}.\n Your total funds are {totalAmt}")
+    print(f"The amount of money on your card is {cardAmt} and your cash amount is {cashAmt}.\n Your total funds are {money}")
     print("You win the game by getting home from GameStop with the games in your hand, good luck")
     navigation()
 
@@ -69,8 +65,8 @@ def navigation():
             print("Enter a valid option")
 
 def checkout(a):
-    if newPrice>money:
-        foundOrNot = random.randint(0,2)
+    if newPrice>balance:
+        foundOrNot = int(random.randint(0,2))
         print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
         print(f"You have rolled a {foundOrNot}")
         if foundOrNot == 0:
@@ -85,5 +81,4 @@ def exit():
             print("Your games fall into the sewer, oops, game over")
         elif leftRight == "l":
             print("You make it home safe, you win, good job")
-
-startGame(hello)
+startGame()
