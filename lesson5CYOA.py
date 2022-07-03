@@ -27,8 +27,8 @@ def navigation():
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
                 newPrice = 140
-                checkout(newPrice)
                 break
+                checkout(newPrice)
             else:
                 print("Ok, choose the aisle again.")
         elif choice == "ps4":
@@ -37,8 +37,8 @@ def navigation():
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
                 newPrice = 37
-                checkout(newPrice)
                 break
+                checkout(newPrice)
             else:
                 print("Ok, choose the aisle again.")
         elif choice == "xb1":
@@ -47,8 +47,8 @@ def navigation():
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
                 newPrice = 46
-                checkout(newPrice)
                 break
+                checkout(newPrice)
             else:
                 print("Ok, choose the aisle again.")
         elif choice == "xb1x":
@@ -57,15 +57,18 @@ def navigation():
             if newChoice == "y":                
                 print("Great, these items are added to your cart.")
                 newPrice = 151
-                checkout(newPrice)
                 break
+                checkout(newPrice)
             else:
                 print("Ok, choose the aisle again.")
         else:
             print("Enter a valid option")
 
 def checkout(a):
-    if newPrice>balance:
+    if balance>=newPrice:
+        print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
+        exit()
+    else:
         foundOrNot = int(random.randint(0,2))
         print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
         print(f"You have rolled a {foundOrNot}")
@@ -74,6 +77,7 @@ def checkout(a):
             exit()
         else:
             print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
+
 def exit():
     leftRight = input("Do you walk to the left or right side of the street?\tType r for right and l for left")
     while True:
