@@ -43,7 +43,8 @@ def navigation():
                         print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
-       
+            break
+
         elif choice == "ps4":
             consoles.ps4items.printOptions()
             newChoice = input("Enter (y or n) ").lower()
@@ -64,6 +65,7 @@ def navigation():
                         print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
+            break
 
         elif choice == "xb1":
             consoles.xb1items.printOptions()
@@ -85,6 +87,7 @@ def navigation():
                         print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
+            break
 
         elif choice == "xb1x":
             consoles.xb1xitems.printOptions()
@@ -109,6 +112,7 @@ def navigation():
 
         else:
             print("Enter a valid option")
+        break
 
 # def checkout(a):
 #     if balance>=newPrice:
