@@ -22,7 +22,7 @@ def navigation():
     choice = str(input("What is your choice?")).lower()
     while True:
         if choice == "ps5":
-            consoles.ps5items.printOptions()
+            consoles.consoleItems.printOptionsPS5()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 newPrice = 140
@@ -46,7 +46,7 @@ def navigation():
             break
 
         elif choice == "ps4":
-            consoles.ps4items.printOptions()
+            consoles.consoleItems.printOptionsPS4()
             newChoice = input("Enter (y or n) ").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
@@ -68,7 +68,7 @@ def navigation():
             break
 
         elif choice == "xb1":
-            consoles.xb1items.printOptions()
+            consoles.consoleItems.printOptionsXB1()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
@@ -90,7 +90,7 @@ def navigation():
             break
 
         elif choice == "xb1x":
-            consoles.xb1xitems.printOptions()
+            consoles.consoleItems.printOptionsXB1X()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
