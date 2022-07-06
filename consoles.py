@@ -61,4 +61,4 @@ class consoleClass:
 #     def printOptions(self):
 #         print(f"Would you like to purchase {self.gameOne} - ${self.priceOne} and {self.gameTwo} ${self.priceTwo}?")
 
-consoleItems = consoleClass("Resident Evil: Village", 70, "Batman Arkham Collection", 71,"Street Fighter 5", 40, "Black Ops 3", 25,"Infinite Warfare", 15, "2K21", 20,"Gotham Knights", 70, "MK11", 36)
+# consoleItems = consoleClass("Resident Evil: Village", 70, "Batman Arkham Collection", 71,"Street Fighter 5", 40, "Black Ops 3", 25,"Infinite Warfare", 15, "2K21", 20,"Gotham Knights", 70, "MK11", 36)

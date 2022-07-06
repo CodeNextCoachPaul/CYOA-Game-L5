@@ -3,6 +3,7 @@ import random;
 cardAmt = int(random.randint(0, 36))
 cashAmt = int(random.randint(0, 145))
 balance = cardAmt+cashAmt
+consoleItems = consoles.consoleClass("Resident Evil: Village", 70, "Batman Arkham Collection", 71,"Street Fighter 5", 40, "Black Ops 3", 25,"Infinite Warfare", 15, "2K21", 20,"Gotham Knights", 70, "MK11", 36)
 
 def startGame():
     hello = input("Welcome, what is your name? ")
@@ -22,7 +23,7 @@ def navigation():
     choice = str(input("What is your choice?")).lower()
     while True:
         if choice == "ps5":
-            consoles.consoleItems.printOptionsPS5()
+            consoleItems.printOptionsPS5()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 newPrice = 140
@@ -46,7 +47,7 @@ def navigation():
             break
 
         elif choice == "ps4":
-            consoles.consoleItems.printOptionsPS4()
+            consoleItems.printOptionsPS4()
             newChoice = input("Enter (y or n) ").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
@@ -68,7 +69,7 @@ def navigation():
             break
 
         elif choice == "xb1":
-            consoles.consoleItems.printOptionsXB1()
+            consoleItems.printOptionsXB1()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
@@ -90,7 +91,7 @@ def navigation():
             break
 
         elif choice == "xb1x":
-            consoles.consoleItems.printOptionsXB1X()
+            consoleItems.printOptionsXB1X()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
