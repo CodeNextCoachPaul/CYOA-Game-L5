@@ -25,64 +25,110 @@ def navigation():
             consoles.ps5items.printOptions()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
-                print("Great, these items are added to your cart.")
                 newPrice = 140
-                break
-                checkout(newPrice)
+                #checkout(newPrice)
+                # break
+                print("Great, these items are added to your cart.")
+                if balance>=newPrice:
+                    print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
+                    exit()
+                else:
+                    foundOrNot = int(random.randint(0,2))
+                    print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
+                    print(f"You have rolled a {foundOrNot}")
+                    if foundOrNot == 0:
+                        print("Good, you found enough money outside, so you pay and exit.")
+                        exit()
+                    else:
+                        print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
+       
         elif choice == "ps4":
             consoles.ps4items.printOptions()
-            newChoice = input("Enter (y or n)").lower()
+            newChoice = input("Enter (y or n) ").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
                 newPrice = 37
-                break
-                checkout(newPrice)
+                if balance>=newPrice:
+                    print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
+                    exit()
+                else:
+                    foundOrNot = int(random.randint(0,2))
+                    print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
+                    print(f"You have rolled a {foundOrNot}")
+                    if foundOrNot == 0:
+                        print("Good, you found enough money outside, so you pay and exit.")
+                        exit()
+                    else:
+                        print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
+
         elif choice == "xb1":
             consoles.xb1items.printOptions()
             newChoice = input("Enter (y or n)").lower()
             if newChoice == "y":
                 print("Great, these items are added to your cart.")
                 newPrice = 46
-                break
-                checkout(newPrice)
+                if balance>=newPrice:
+                    print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
+                    exit()
+                else:
+                    foundOrNot = int(random.randint(0,2))
+                    print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
+                    print(f"You have rolled a {foundOrNot}")
+                    if foundOrNot == 0:
+                        print("Good, you found enough money outside, so you pay and exit.")
+                        exit()
+                    else:
+                        print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
+
         elif choice == "xb1x":
             consoles.xb1xitems.printOptions()
             newChoice = input("Enter (y or n)").lower()
-            if newChoice == "y":                
+            if newChoice == "y":
                 print("Great, these items are added to your cart.")
                 newPrice = 151
-                break
-                checkout(newPrice)
+                if balance>=newPrice:
+                    print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
+                    exit()
+                else:
+                    foundOrNot = int(random.randint(0,2))
+                    print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
+                    print(f"You have rolled a {foundOrNot}")
+                    if foundOrNot == 0:
+                        print("Good, you found enough money outside, so you pay and exit.")
+                        exit()
+                    else:
+                        print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
             else:
                 print("Ok, choose the aisle again.")
+
         else:
             print("Enter a valid option")
 
-def checkout(a):
-    if balance>=newPrice:
-        print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
-        exit()
-    else:
-        foundOrNot = int(random.randint(0,2))
-        print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
-        print(f"You have rolled a {foundOrNot}")
-        if foundOrNot == 0:
-            print("Good, you found enough money outside, so you pay and exit.")
-            exit()
-        else:
-            print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
+# def checkout(a):
+#     if balance>=newPrice:
+#         print("Alright, your bags are bagged and your payment was successful, you may now exit the building")
+#         exit()
+#     else:
+#         foundOrNot = int(random.randint(0,2))
+#         print("You don't have enough, now you'll go outside and look for money\nYou have coinflipped, if it lands on 1, you will find the money, else, you will find another way to get them..")
+#         print(f"You have rolled a {foundOrNot}")
+#         if foundOrNot == 0:
+#             print("Good, you found enough money outside, so you pay and exit.")
+#             exit()
+#         else:
+#             print("You go back to the aisle, get caught and get thrown out. The clerk calls the police on you and you get taken into custody, game over.")
 
 def exit():
     leftRight = input("Do you walk to the left or right side of the street?\tType r for right and l for left")
-    while True:
-        if leftRight == "r" :
-            print("Your games fall into the sewer, oops, game over")
-        elif leftRight == "l":
-            print("You make it home safe, you win, good job")
+    if leftRight == "r" :
+        print("Your games fall into the sewer, oops, game over")
+    elif leftRight == "l":
+        print("You make it home safe, you win, good job")
+
 startGame()
